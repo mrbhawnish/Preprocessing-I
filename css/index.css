@@ -136,6 +136,7 @@ html,
 body {
   width: auto;
   height: auto;
+  font-family: 'Raleway';
 }
 .upper_content {
   width: 100%;
@@ -147,7 +148,6 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 10px 0 20px 0;
-  padding-bottom: 2rem;
 }
 @media (max-width: 500px) {
   .upper_content .nav-items {
@@ -223,6 +223,7 @@ body {
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-size: 15px;
+  line-height: 1.5;
 }
 .text-container a {
   font-size: 24px;
@@ -243,6 +244,9 @@ body {
   justify-content: center;
   justify-content: space-evenly;
   background-color: #0edb8d;
+}
+.thisismiddle .middle-content p {
+  line-height: 1.8;
 }
 .middle-content {
   margin: 20px 0 20px 0;
