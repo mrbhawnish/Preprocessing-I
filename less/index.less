@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: rgb(11, 243, 166);
+	// background-color: rgb(100, 206, 241);
 }
 ol, ul {
 	list-style: none;
@@ -50,10 +52,240 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid black;
 }
 
 html, body {
-    height: 100%;
+	width: auto;
+	height: auto;
+	font-family: 'Raleway';
+	
 }
 
+//The variables
+
+@back-color: rgb(14, 219, 141);
+@hover-color: slategray; 
+@mobile: ~"(max-width: 500px)";
+
+//The mixins
+
+.flex-maincontent() {
+	justify-content: flex-start;
+	align-content: right;
+	align-items: flex-end;
+}
+
+.footer-flex () {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+
+
+
+//All about the upper content
+.upper_content{
+ width: 100%;
+ height: 100%;
+ background-color: @back-color;
+ 
+ .nav-items {
+	width: 95%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 0 20px 0;
+	
+	@media @mobile {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	a  {
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  margin-top: 3vh;
+	  margin-right: 5vh;
+	  color: black;
+	  @media @mobile {
+		justify-content: center;
+		flex-direction: column;
+	}
+	} 
+	a:hover {
+		color: salmon;
+		font-size: larger;
+	}
+}
+}
+
+//All about the after upper_content.
+.container {
+	width: auto;
+	height: auto;
+
+    .top-content{
+	  margin: 10px 80px;
+	  border-radius: 20px;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  width: auto;
+	  height: auto;
+	  background-image: url("/Preprocessing-I/assets/landscape.jpeg");
+	  background-color: lightgray;
+	  padding-bottom: 5%;
+	  @media @mobile {
+		max-width: 100%;
+	}
+
+	    img {
+		  margin: 30px;
+		  max-width: 20%;
+		  border-radius: 50%;
+
+          
+		}
+
+	}
+}
+
+//Upper content continueswith text styles...
+
+.text-container {
+	color: lightskyblue;
+	text-shadow: lightsalmon;
+	margin: 0 auto;
+	width: 70%;
+	height: auto;
+	display: block;
+	flex-direction: column;
+
+
+	h2{
+	 font-size: 30px;
+	 margin: 20px 0 20px 0;
+	 
+	}
+
+	h4{
+		padding-bottom: 10px;
+		margin-bottom: 3px;
+		border-bottom: 1px solid white;
+	}
+
+	p{ 
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+		font-size: 15px;
+		line-height: 1.5;
+	
+	}
+	a {
+		font-size: 24px;
+		padding: 10px 20px 10px 20px;
+		margin-top: 4rem;
+		background-color: lightslategray;
+		color: lightskyblue;
+		text-decoration: none;
+		border-radius: 6px;
+		
+	}
+
+}
+
+.text-container a:hover {
+	font-size: larger;
+	background-color: salmon;
+}
+	
+//Middle content starts here...
+.thisismiddle {
+	display: flex;
+	align-items: space-around;
+	justify-content: center;
+	justify-content: space-evenly;
+	background-color: @back-color;
+	.middle-content p {
+      line-height: 1.8;
+
+	}
+}
+
+
+
+  .middle-content {
+	margin: 20px 0 20px 0;
+    .flex-maincontent();
+	//   justify-content: space-evenly;
+	//   align-content: space-around;
+	//   flex-direction: column;
+	  width: 40%;
+
+	  h2{
+		border-bottom: 1px solid lightgoldenrodyellow;
+		letter-spacing: 0.2em;
+		margin-bottom: 20px;
+		font-size: 30px;
+		color: black;
+	   }
+
+  }
+
+
+  .middle-content-right{
+	margin: 20px 0 20px 0;
+	justify-content: flex-end;
+	align-content: right;
+	align-items: flex-end;
+	width: 40%;
+	 
+
+	  h2{
+		border-bottom: 1px solid lightgoldenrodyellow;
+		letter-spacing: 0.2em;
+		margin-bottom: 30px;
+		font-size: 30px;
+		color: black;
+	   }
+	   table{
+		   text-align: center;
+	   }
+	   
+
+	   table, th, td {
+		border: 1px solid black;
+	  }
+
+      th, td {
+		padding: 15px;
+	  }
+	  
+	  table#t01 tr:nth-child(even) {
+		background-color: rgb(12, 214, 147);
+	  }
+	  table#t01 tr:nth-child(odd) {
+	   background-color: rgb(11, 243, 166);
+	  }
+  }
+
+
+  .footertag-class{
+	margin: 10px 0 10px 0;
+	width: auto;
+	background-color: @back-color;
+	padding: 1rem 1rem;
+    .footer-flex();
+}
+footer .topText{
+	font-size: 24px;
+	letter-spacing: 0.2em;
+	margin-bottom: 1rem;
+}

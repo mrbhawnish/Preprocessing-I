@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(150deg, #04d171 40%, #1adad0 50%);
+  font-family: 'Raleway';
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  height: auto;
+}
+.main-content {
+  background: lightgray;
+  padding: 10rem;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-content .txt-container {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 24%;
+}
+.main-content .txt-container {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 24%;
+}

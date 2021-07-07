@@ -1,1 +1,312 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #0bf3a6;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  border: 10px solid black;
+}
+html,
+body {
+  width: auto;
+  height: auto;
+  font-family: 'Raleway';
+}
+.upper_content {
+  width: 100%;
+  height: 100%;
+  background-color: #0edb8d;
+}
+.upper_content .nav-items {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 20px 0;
+}
+@media (max-width: 500px) {
+  .upper_content .nav-items {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.upper_content .nav-items a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 3vh;
+  margin-right: 5vh;
+  color: black;
+}
+@media (max-width: 500px) {
+  .upper_content .nav-items a {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.upper_content .nav-items a:hover {
+  color: salmon;
+  font-size: larger;
+}
+.container {
+  width: auto;
+  height: auto;
+}
+.container .top-content {
+  margin: 10px 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-image: url("/Preprocessing-I/assets/landscape.jpeg");
+  background-color: lightgray;
+  padding-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .container .top-content {
+    max-width: 100%;
+  }
+}
+.container .top-content img {
+  margin: 30px;
+  max-width: 20%;
+  border-radius: 50%;
+}
+.text-container {
+  color: lightskyblue;
+  text-shadow: lightsalmon;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  display: block;
+  flex-direction: column;
+}
+.text-container h2 {
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+}
+.text-container h4 {
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid white;
+}
+.text-container p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.text-container a {
+  font-size: 24px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 4rem;
+  background-color: lightslategray;
+  color: lightskyblue;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.text-container a:hover {
+  font-size: larger;
+  background-color: salmon;
+}
+.thisismiddle {
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #0edb8d;
+}
+.thisismiddle .middle-content p {
+  line-height: 1.8;
+}
+.middle-content {
+  margin: 20px 0 20px 0;
+  justify-content: flex-start;
+  align-content: right;
+  align-items: flex-end;
+  width: 40%;
+}
+.middle-content h2 {
+  border-bottom: 1px solid lightgoldenrodyellow;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: black;
+}
+.middle-content-right {
+  margin: 20px 0 20px 0;
+  justify-content: flex-end;
+  align-content: right;
+  align-items: flex-end;
+  width: 40%;
+}
+.middle-content-right h2 {
+  border-bottom: 1px solid lightgoldenrodyellow;
+  letter-spacing: 0.2em;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: black;
+}
+.middle-content-right table {
+  text-align: center;
+}
+.middle-content-right table,
+.middle-content-right th,
+.middle-content-right td {
+  border: 1px solid black;
+}
+.middle-content-right th,
+.middle-content-right td {
+  padding: 15px;
+}
+.middle-content-right table#t01 tr:nth-child(even) {
+  background-color: #0cd693;
+}
+.middle-content-right table#t01 tr:nth-child(odd) {
+  background-color: #0bf3a6;
+}
+.footertag-class {
+  margin: 10px 0 10px 0;
+  width: auto;
+  background-color: #0edb8d;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+footer .topText {
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
